@@ -2,17 +2,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public final class Player {
-	HashMap<Crest, Integer> crestPool; // Used for tracking the number of Crests a player has
-									   // The more Crests a player has, the more actions they can perform
+	private HashMap<Crest, Integer> crestPool; // Used for tracking the number of Crests a player has
+									   		   // The more Crests a player has, the more actions they can perform
 	
-	ArrayList<Monster> summonedMonsters;
-
+	private ArrayList<Monster> summonedMonsters;
 	
 	Player() {
 		crestPool.put(Crest.ATTACK, 0);
 		crestPool.put(Crest.DEFENSE, 0);
 		crestPool.put(Crest.MOVE, 0);
 		crestPool.put(Crest.MAGIC, 0);
+		crestPool.put(Crest.SUMMON, 0);
 	}
 	
 	public void rollDice() { // Each turn, the player rolls 3 dice of random types
@@ -34,5 +34,9 @@ public final class Player {
 			System.out.println("Failed to remove crest from crestPool");
 			return false;
 		}			
+	}
+	
+	public int getNumberOfCrests(Crest crest) {
+		return crestPool.get(crest);
 	}
 }

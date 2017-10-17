@@ -2,7 +2,6 @@ import java.util.Random;
 
 public abstract class Dice {
 	protected Crest[] sides;
-	protected final int summonLevel = 0; // Used to determine the level of monster to summon when rolling 2 or 3 summon crests
 	
 	Dice() {
 		sides = new Crest[6];		
