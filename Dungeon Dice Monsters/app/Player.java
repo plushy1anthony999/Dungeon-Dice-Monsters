@@ -8,9 +8,31 @@ public final class Player {
 	ArrayList<Monster> summonedMonsters;
 
 	
-	Player() {}
+	Player() {
+		crestPool.put(Crest.ATTACK, 0);
+		crestPool.put(Crest.DEFENSE, 0);
+		crestPool.put(Crest.MOVE, 0);
+		crestPool.put(Crest.MAGIC, 0);
+	}
 	
-	public static void rollDice() { // Each turn, the player rolls 3 dice of random types
+	public void rollDice() { // Each turn, the player rolls 3 dice of random types
 		
+	}
+	
+	public void addCrests(Crest crest, int numOfCrestsToAdd) {
+		int currentNumOfCrests = crestPool.get(crest);
+		
+		crestPool.put(crest, currentNumOfCrests + numOfCrestsToAdd);
+	}
+	public boolean removeCrests(Crest crest, int numOfCrestsToRemove) {
+		int currentNumOfCrests = crestPool.get(crest);
+
+		if(currentNumOfCrests > 0 && currentNumOfCrests >= numOfCrestsToRemove) {
+			crestPool.put(crest, currentNumOfCrests - numOfCrestsToRemove);
+			return true;
+		} else {
+			System.out.println("Failed to remove crest from crestPool");
+			return false;
+		}			
 	}
 }
