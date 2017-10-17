@@ -1,0 +1,11 @@
+public final class Dungeon {
+	int[][] spaces;
+	
+	Dungeon() {
+		
+	}
+	
+	private final class DungeonSpace {
+		
+	}
+}

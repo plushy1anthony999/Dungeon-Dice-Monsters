@@ -1,0 +1,6 @@
+public final class Dungeon {
+	
+	private final class DungeonSpace {
+		
+	}
+}

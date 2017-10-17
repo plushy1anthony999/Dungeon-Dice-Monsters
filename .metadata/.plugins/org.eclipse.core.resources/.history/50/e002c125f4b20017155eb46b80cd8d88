@@ -1,0 +1,7 @@
+public final class Dungeon {
+	int[] spaces;
+	
+	private final class DungeonSpace {
+		
+	}
+}
