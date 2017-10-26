@@ -1,12 +1,8 @@
 package DungeonTests;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.lang.reflect.Executable;
-import java.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.hamcrest.CoreMatchers.hasItems;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import Dungeon.*;
 import Dungeon.DungeonSpace.Color;
 

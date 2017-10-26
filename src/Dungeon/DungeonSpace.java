@@ -7,7 +7,8 @@ public final class DungeonSpace {
 							    // Must match the index its located at in the grid
 	
 	private final Color COLOR;	// Used to denote which player this this space belongs to 
-								// BLUE is player1 (Human), RED is player2 (AI)
+								// BLUE is player1 (Human), at bottom of board
+								// RED is player2 (AI), at top of board
 	public DungeonSpace(Color color) {
 		isOccupied = false;
 		coordinate = null;
@@ -31,8 +32,8 @@ public final class DungeonSpace {
 	// TODO: Maybe remove?
 //	public void setCoordinate(int[] coordinate) {
 //		 // Make sure coordinate is actually inside the Dungeon Grid
-//		if(coordinate[0] > 0 && coordinate[0] < Dungeon.MAX_ROWS &&
-//		   coordinate[1] > 0 && coordinate[1] < Dungeon.MAX_COLS
+//		if(coordinate[0] >= 0 && coordinate[0] < Dungeon.MAX_ROWS &&
+//		   coordinate[1] >= 0 && coordinate[1] < Dungeon.MAX_COLS
 //		)
 //			this.coordinate = coordinate;
 //		else
