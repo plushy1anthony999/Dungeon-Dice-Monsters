@@ -15,26 +15,29 @@ public final class DungeonSpace {
 	}
 	public DungeonSpace(Color color, int[] coordinate) {
 		isOccupied = false;
-		setCoordinate(coordinate);
+		//setCoordinate(coordinate); // TODO: Maybe remove?
 		
 		this.COLOR = color;
 	}
 	
-	public int[] getCoordinate() {
-		return coordinate;
-	}
+	// TODO: Maybe remove?
+//	public int[] getCoordinate() {
+//		return coordinate;
+//	}
 	public Color getColor() {
 		return COLOR;
 	}	
-	public void setCoordinate(int[] coordinate) {
-		 // Make sure coordinate is actually inside the Dungeon Grid
-		if(coordinate[0] > 0 && coordinate[0] < Dungeon.MAX_ROWS &&
-		   coordinate[1] > 0 && coordinate[1] < Dungeon.MAX_COLS
-		)
-			this.coordinate = coordinate;
-		else
-			throw new Error("Coordinates passed in are out-of-bounds");
-	}
+	
+	// TODO: Maybe remove?
+//	public void setCoordinate(int[] coordinate) {
+//		 // Make sure coordinate is actually inside the Dungeon Grid
+//		if(coordinate[0] > 0 && coordinate[0] < Dungeon.MAX_ROWS &&
+//		   coordinate[1] > 0 && coordinate[1] < Dungeon.MAX_COLS
+//		)
+//			this.coordinate = coordinate;
+//		else
+//			throw new Error("Coordinates passed in are out-of-bounds");
+//	}
 //	public boolean getIsOccupied() {
 //		return isOccupied;
 //	}

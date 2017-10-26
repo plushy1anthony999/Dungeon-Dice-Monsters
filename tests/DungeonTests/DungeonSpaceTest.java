@@ -25,7 +25,6 @@ public class DungeonSpaceTest {
 		dungeonSpace = new DungeonSpace(Color.BLUE);
 		assertEquals(dungeonSpace.getColor(), Color.BLUE);
 		
-		assertNull(dungeonSpace.getCoordinate());
 		assertEquals(dungeonSpace.isOccupied, false);
 	}
 	
@@ -34,13 +33,9 @@ public class DungeonSpaceTest {
 		dungeonSpace = new DungeonSpace(Color.RED, new int[] {2, 3});
 
 		assertEquals(dungeonSpace.isOccupied, false);
-		assertArrayEquals(dungeonSpace.getCoordinate(), new int[] {2, 3});
-	}
-	@Test //public DungeonSpace(Color color, int[] coordinate) w/ out-of-bound coordinates
-	final void testDungeonSpaceWithOutOfBoundCoordinates() {		
-		assertThrows(Error.class, () -> {dungeonSpace = new DungeonSpace(Color.RED, new int[] {2, 55});});
-		assertThrows(Error.class, () -> {dungeonSpace = new DungeonSpace(Color.RED, new int[] {46, 1});});
-		assertThrows(Error.class, () -> {dungeonSpace = new DungeonSpace(Color.RED, new int[] {-1, 1});});
-		assertThrows(Error.class, () -> {dungeonSpace = new DungeonSpace(Color.RED, new int[] {0, -1});});
+		
+		dungeonSpace = new DungeonSpace(Color.RED, new int[] {1, 1});
+
+		assertEquals(dungeonSpace.isOccupied, false);
 	}
 }

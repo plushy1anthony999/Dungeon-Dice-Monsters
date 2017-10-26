@@ -44,7 +44,6 @@ class DungeonPiecesTest {
 				for(int j = 0; j < dungeonPiece.getDungeonPiece()[i].length; j++) { // COLS
 					if(dungeonPiece.getDungeonPiece()[i][j] != null) {
 						numOfSpaces++;
-						assertNull(dungeonPiece.getDungeonPiece()[i][j].getCoordinate());
 						assertEquals(dungeonPiece.getDungeonPiece()[i][j].getColor(), Color.RED);
 					}					
 				}
@@ -61,7 +60,6 @@ class DungeonPiecesTest {
 		
 		for(DungeonSpace space : dungeonPiece.getArrayOfDungeonSpaces()) {
 			assertEquals(space.getColor(), Color.RED);
-			assertNull(space.getCoordinate());
 		}
 	}
 }
