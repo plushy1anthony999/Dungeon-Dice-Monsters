@@ -15,8 +15,8 @@ class DungeonTest {
 	@Test
 	final void testDungeon() {
 		dungeon = new Dungeon();
-		for(int i = 0; i < dungeon.MAX_ROWS; i++) {
-			for(int j = 0; j < dungeon.MAX_COLS; j++) {
+		for(int i = 0; i < Dungeon.MAX_ROWS; i++) {
+			for(int j = 0; j < Dungeon.MAX_COLS; j++) {
 				assertNull(dungeon.getGrid()[i][j]);
 			}
 		}

@@ -54,6 +54,7 @@ class DungeonPiecesTest {
 		}
 	}
 	
+	// TODO: Maybe get rid of this method?
 	@Test
 	final void testGetArrayOfDungeonSpaces() {
 		dungeonPiece = new DungeonPieceA(Color.RED);

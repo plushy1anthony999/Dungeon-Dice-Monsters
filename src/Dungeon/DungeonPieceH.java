@@ -3,7 +3,7 @@ import Dungeon.DungeonSpace.Color;
 
 public final class DungeonPieceH extends DungeonPiece {
 	public DungeonPieceH(Color color) {
-		super(color);
+		super(color, new int[] {2, 0});
 		dungeonPiece = new DungeonSpace[][] {
 			{null,				      new DungeonSpace(color), null			   },
 			{null,				      new DungeonSpace(color), null			   },
