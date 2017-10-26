@@ -1,15 +1,14 @@
 package Dungeon;
+import Dungeon.DungeonSpace.Color;
 
 public final class DungeonPieceK extends DungeonPiece {
-	protected final DungeonSpace[][] dungeonPiece; // The piece is a non-rectangular 2D Array
-
-	public DungeonPieceK() {
-		super();
+	public DungeonPieceK(Color color) {
+		super(color);
 		dungeonPiece = new DungeonSpace[][] {
-			{new DungeonSpace(), null,				 null			   },
-			{new DungeonSpace(), new DungeonSpace(), null			   },
-			{null, 				 new DungeonSpace(), new DungeonSpace()},
-			{null, 				 null, 				 new DungeonSpace()}
+			{new DungeonSpace(color), null,				       null			          },
+			{new DungeonSpace(color), new DungeonSpace(color), null			          },
+			{null, 				      new DungeonSpace(color), new DungeonSpace(color)},
+			{null, 				      null, 				   new DungeonSpace(color)}
 		};
 	}
 }
@@ -18,9 +17,12 @@ public final class DungeonPieceK extends DungeonPiece {
 //	  ----
 //	  |  |
 //	  ---|--|
-//	  |  |  |
+//	  |  |XX|
 //	  ---|--|--- 
 //	     |  |  | 
 //	     ---|--- 
 //	        |  |
 //	        ----
+
+//XX is the spot where a monster is when their summoned 
+//and the Dungeon piece is placed into the dungeon grid
